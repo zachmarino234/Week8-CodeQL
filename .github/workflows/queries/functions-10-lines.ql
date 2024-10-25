@@ -7,7 +7,7 @@
 import javascript
 
 predicate isLongFunction(Function fn) {
-  fn.getEndLine() - fn.getStartLine() > 10
+  fn.getNumLines() > 10
 }
 
 from Function fn
