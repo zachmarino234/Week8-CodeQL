@@ -7,5 +7,5 @@
 import javascript
 
 from Function fn
-where fn.getEndLine() - fn.getStartLine() > 10
+where fn.getEndLine().toInt() - fn.getStartLine().toInt() > 10
 select fn, "Function is longer than 10 lines."
