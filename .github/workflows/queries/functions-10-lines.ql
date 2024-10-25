@@ -6,6 +6,10 @@
  */
 import javascript
 
+predicate isLongFunction(Function fn) {
+  fn.getEndLine() - fn.getStartLine() > 10
+}
+
 from Function fn
-where fn.getEndLine().toInt() - fn.getStartLine().toInt() > 10
+where isLongFunction(fn)
 select fn, "Function is longer than 10 lines."
